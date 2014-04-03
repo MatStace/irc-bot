@@ -69,7 +69,7 @@ http[s]://...
     html = Nokogiri::HTML(open(url))
 
     if node = html.at_xpath("html/head/title")
-      msg.reply("[ " + node.text + " ]")
+      msg.reply("[ " + node.text.strip + " ]")
     end
 
   rescue => e
